@@ -91,4 +91,4 @@ def get_data():
         return jsonify({"error": f"HTTP request failed for source '{source}': {e}"}), 500
 
 if __name__ == '__main__':
-    app.run(port=config.PORT)
+    app.run(host=config.HOST, port=config.PORT)
