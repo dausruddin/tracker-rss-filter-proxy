@@ -68,7 +68,6 @@ def get_data():
                 content = item.find(data['field'])
                 if content is not None and content.text:
                     size_mib = parse_size(content.text, data['filter'])
-                    print(size_mib)
                     if size_mib is not None:
                         min_size_mib = data.get('min_size_mib', 0)
                         max_size_mib = data.get('max_size_mib', float('inf'))
