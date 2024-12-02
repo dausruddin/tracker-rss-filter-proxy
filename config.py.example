@@ -1,0 +1,21 @@
+PORT = 8080
+PASSWORD = "test"
+
+SOURCES = {
+    "ipt": {
+        "rss": "https://iptorrents.com/t.rss?u=USERID;tp=APIKEY;48;20;download;free",
+        "field": "description",
+        "filter": r"([\d\.]+)\s*([MG]B)",
+        "min_size_mib": 0,
+        "max_size_mib": 10240,
+    },
+    "aither": {
+        "rss": "https://aither.cc/rss/APIKEY",
+        "field": "description",
+        "filter": r":\s*([\d\.]+)\s*([MG]iB)",
+        "min_size_mib": 0,
+        "max_size_mib": 10240,
+    }
+}
+
+
